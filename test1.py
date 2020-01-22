@@ -123,10 +123,10 @@ def condi(order,where,from1,C1):
             count=count+1
         count=0
         if(fg==0):
-            count1=0
+            count1=3
             for i in range(0,len(z2)):
                 if(z2[i]==where[2]):
-                    D.append(count)
+                    D.append(count1)
                     flag2=1
                 count1=count1+1
         if(flag2==0):
@@ -178,17 +178,19 @@ def condi(order,where,from1,C1):
         s1="" 
         #print("hello")
         #if(where==[2]!=)
-        
+        #print(D)
         for i in range(0,len(C1)):
             s1=""
             s2=""
-           # print("hello")
+            #print(where[2])
+            #print(D[2])
             if(where[2]==D[2]):
                 s2=s2+C1[i][D[0]]+" "+D[1]+" "+str(D[2])
             else:
+               # print(s2)
                 s2=s2+C1[i][D[0]]+" "+D[1]+" "+C1[i][D[2]]
             flg=eval(s2)
-            #print(s2)
+           # print(s2)
             if(len(where)==7):
                 if(where[6]==D[6]):
                     s1=s1+C1[i][D[4]]+" "+D[5]+" "+str(D[6])
@@ -210,7 +212,7 @@ def condi(order,where,from1,C1):
                     
                     continue
             for j in range(0,len(order)):
-                print(C1[i][order[j]],"   ",end="\t")
+                print(C1[i][order[j]],"",end="\t")
             print("")
 
 
@@ -604,7 +606,7 @@ def cart_prod(selec,attribu,where):
                 flag=-1
                 print("asd")
                 order.append(c)
-        #print(order)
+        print(order)
         #print
         # for i in range(0,len(C)):
         #     for j in range(0,len(C[0])):
